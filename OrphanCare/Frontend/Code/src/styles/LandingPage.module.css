@@ -1,0 +1,675 @@
+.landingPage {
+  min-height: 100vh;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroWave {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.heroContent {
+  max-width: 600px;
+  color: var(--text-black);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.heroTitle::before,
+.heroTitle::after {
+  content: '"';
+  color: var(--primary-maroon);
+}
+
+.heroText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+/* Mission Section */
+.mission {
+  padding: 80px 0;
+  background-color: var(--secondary-gray);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--text-black);
+}
+
+.missionText {
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.missionImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.imageCard {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.imageCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.imageCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* How to Donate Section */
+.howToDonate {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.donationSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stepIcon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: var(--white);
+  border: 3px solid var(--primary-maroon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--primary-maroon);
+  transition: var(--transition);
+}
+
+.stepIcon:hover {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 8px;
+}
+
+.heartbeat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100px;
+}
+
+.heartbeatLine {
+  width: 100px;
+  height: 50px;
+}
+
+.heartIcon {
+  position: absolute;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background-color: var(--secondary-gray);
+}
+
+.aboutCard {
+  background-color: var(--white);
+  padding: 48px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutCard p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--light-gray);
+  margin-bottom: 24px;
+}
+
+.aboutCard p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--text-black);
+  color: var(--white);
+  padding: 48px 0 24px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.footerSection h3,
+.footerSection h4 {
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.footerSection h3 {
+  color: var(--primary-maroon);
+  font-size: 1.3rem;
+}
+
+.footerSection p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLinks a {
+  color: #ccc;
+  transition: var(--transition);
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socialLinks a:hover {
+  color: var(--primary-maroon);
+  background-color: var(--white);
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #444;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroText {
+    font-size: 1rem;
+  }
+  
+  .missionImages {
+    grid-template-columns: 1fr;
+  }
+  
+  .donationSteps {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .heartbeat {
+    display: none;
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .aboutCard {
+    padding: 32px 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .mission,
+  .howToDonate,
+  .about {
+    padding: 48px 0;
+  }
+}
+.landingPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9f6ff, #f3f9ff);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffdde1, #800033);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.heroWave {
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+.heroContent {
+  max-width: 700px;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+.heroTitle {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #800033);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroText {
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 118, 136, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 118, 136, 0.6);
+}
+
+/* Mission Section */
+.mission {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #d2d9c2, #2ef048);
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #2a2929);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.missionText {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 48px;
+  color:white;
+  line-height: 1.6;
+}
+
+.imageCard {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.imageCard:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* Donation Steps */
+.howToDonate {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.stepIcon {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  border: none;
+  box-shadow: 0 4px 10px rgba(252, 182, 159, 0.4);
+}
+
+.stepIcon:hover {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* About Section */
+.about {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.aboutCard {
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.aboutCard p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #434343, #000000);
+  color: var(--white);
+  padding: 60px 0 30px;
+}
+
+.footerSection h3 {
+  color: #ff758c;
+}
+
+.socialLinks a {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.socialLinks a:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffdde1, #800033);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.heroTitle .highlight {
+  background: linear-gradient(90deg, #800033);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroText {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.heroText .brand {
+  font-weight: 700;
+  color: #ffeaa7;
+}
+
+.heroText .emphasis {
+  font-weight: 600;
+  color: #f8c291;
+}
+
+.heroText .love {
+  color: #800033;
+  font-weight: 700;
+}
+
+.heroText .happiness {
+  color: #55efc4;
+  font-weight: 700;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ebaf46, #ee9701);
+  color: #575353;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(224, 133, 5, 0.4);
+  
+}
+
+.ctaBtn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 185, 8, 0.6);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle { font-size: 2.5rem; }
+  .heroText { font-size: 1rem; }
+}
+.missionText .donor {
+  color: #ff6b81; /* love & care */
+  font-weight: 700;
+}
+
+.missionText .orphanage {
+  color: #6c5ce7; /* compassion & trust */
+  font-weight: 700;
+}
+
+.missionText .hope {
+  color: #f39c12; /* warmth & optimism */
+  font-weight: 700;
+}
+
+.missionText .community {
+  color: #0984e3; /* unity & stability */
+  font-weight: 700;
+}
+
+.missionText .children {
+  color: #e8410e; /* growth & future */
+  font-weight: 700;
+}
+.landingPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #800033);
+  color: #fff; /* optional for readability */
+}
+
+/* Remove individual section backgrounds */
+.landingPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #800033);
+  color: #fff; /* optional for readability */
+}
+
+/* Remove individual section backgrounds */
+.mission,
+.howToDonate,
+.about {
+  background: transparent;
+}
+

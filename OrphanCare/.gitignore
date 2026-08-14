@@ -1,0 +1,14 @@
+Frontend/OrphanCare-v0.3-all-fixed.zip
+Frontend/Code/node_modules
+
+Backend/.venv
+Backend/.venv/*
+Backend/orphancare_proj/db.sqlite3
+
+Backend/__pycache__
+Backend/*/__pycache__
+Backend/*/*/__pycache__
+
+Backend/migrations
+Backend/*/migrations
+Backend/*/*/migrations

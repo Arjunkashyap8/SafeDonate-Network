@@ -1,0 +1,180 @@
+.orphanagesPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f7, #fafafa, #fcefee);
+  animation: bgAnimation 14s ease infinite alternate;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+.container {
+  flex: 1;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #800020; 
+  text-align: center;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.subtitle {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  border: 2px solid #f4d3d8;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #ffb703; /* Golden highlight */
+  box-shadow: 0 8px 20px rgba(128, 0, 32, 0.25);
+}
+
+.card h3 {
+  color: #800020;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contact {
+  margin-bottom: 15px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+}
+
+/* Donate Button */
+.btnDonate {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #800020, #ffb703);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(128, 0, 32, 0.4);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2.5s infinite;
+}
+
+.btnDonate:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 14px rgba(128, 0, 32, 0.6);
+}
+
+/* Map Button */
+.btnMap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #008080, #800020);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.4);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnMap::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.btnMap:hover::after {
+  left: 100%;
+}
+
+.btnMap:hover {
+  transform: scale(1.07);
+}
+
+/* Search Bar */
+.searchBar {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 16px;
+  margin: 0 auto 25px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchBar:focus {
+  border-color: #800020;
+  box-shadow: 0px 0px 8px rgba(128, 0, 32, 0.4);
+}
+
+/* Footer */
+.footer {
+ background: linear-gradient(135deg, #af86c8, #d81b60);
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  border-top: 3px solid #ffb703;
+}
+
+.footerContent {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,84 @@
+.addRequirement {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.addRequirement h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #810d3d;
+}
+
+.formCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #444;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.quantityRow {
+  display: flex;
+  gap: 10px;
+}
+
+.quantityRow input {
+  flex: 2;
+}
+
+.quantityRow select {
+  flex: 1;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: #bbb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #999;
+}
+
+.saveBtn {
+  background: #810d3d;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background: #660029;
+}

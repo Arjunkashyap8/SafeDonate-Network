@@ -1,0 +1,116 @@
+.registrationChoice {
+  min-height: 100vh;
+  background-color: var(--primary-maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  padding: 48px 32px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-weight: 700;
+  color: var(--primary-maroon);
+  font-size: 16px;
+}
+
+.choiceContainer {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.choiceCard {
+  flex: 1;
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.orphanageCard {
+  background-color: #ffcc80;
+}
+
+.donorCard {
+  background-color: #90caf9;
+}
+
+.illustration {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  color: var(--primary-maroon);
+}
+
+.choiceCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-black);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+}
+
+.btnPrimary:hover {
+  background-color: #660029;
+  transform: translateY(-2px);
+}
+
+.footer {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+  .choiceContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .card {
+    padding: 32px 24px;
+  }
+  
+  .logo {
+    left: 24px;
+  }
+  
+  .footer {
+    right: 24px;
+  }
+}

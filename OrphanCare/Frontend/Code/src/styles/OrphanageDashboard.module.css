@@ -1,0 +1,864 @@
+.orphanageDashboard {
+  min-height: 100vh;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroWave {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  color: var(--text-black);
+}
+
+.heroTitle::before,
+.heroTitle::after {
+  content: '"';
+  color: var(--primary-maroon);
+}
+
+.heroText {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+/* Sections */
+.mission,
+.howToDonate,
+.about {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--text-black);
+}
+
+/* Mission Section */
+.missionCard {
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.missionCard h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-black);
+}
+
+.missionCard p {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.missionImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.imageCard {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.imageCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.imageCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* How to Donate Steps */
+.donationSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stepIcon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: var(--white);
+  border: 3px solid var(--primary-maroon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--primary-maroon);
+  transition: var(--transition);
+}
+
+.stepIcon:hover {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 8px;
+}
+
+.heartbeat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100px;
+}
+
+.heartbeatLine {
+  width: 100px;
+  height: 50px;
+}
+
+.heartIcon {
+  position: absolute;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* About Section */
+.aboutCard {
+  background-color: var(--secondary-gray);
+  padding: 48px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutCard p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--light-gray);
+  margin-bottom: 24px;
+}
+
+.aboutCard p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--text-black);
+  color: var(--white);
+  padding: 24px 0;
+  text-align: center;
+}
+
+.footerContent {
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .missionImages {
+    grid-template-columns: 1fr;
+  }
+  
+  .donationSteps {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .heartbeat {
+    display: none;
+  }
+  
+  .aboutCard {
+    padding: 32px 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .mission,
+  .howToDonate,
+  .about {
+    margin-bottom: 32px;
+  }
+}
+/* Profile Section */
+.profileSection {
+  background: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.welcomeText {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: var(--primary-maroon);
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.profileIcon {
+  background: #f0f0f0;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileInfo {
+  flex: 1;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.profileInfo h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.editBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-maroon);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.editBtn:hover {
+  background: #6d1230;
+}
+.btnEdit {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+}
+
+.btnEdit:hover {
+  background-color: #660029;
+  transform: translateY(-2px);
+}
+.btn {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+  font-size: 14px;
+  margin-right: 40px;
+}
+/* Stats Section */
+.statsSection {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: #810d3d; /* same pinkish red as your image */
+  color: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  min-width: 160px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+}
+
+.statCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.statCard p {
+  font-size: 1.3rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.hrrr{
+  border-bottom: 1px solid #cacaca;
+  margin-bottom: 16px;
+  margin-left: 125px;
+  margin-right: 125px;
+}
+/* Input Box inside card */
+.inputBox {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inputBox input:focus {
+  border-color: var(--primary-maroon);
+}
+
+.closeBtn {
+  background: #f44336;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #d32f2f;
+}
+/* Needs Section */
+.needsSection {
+  padding: 60px 20px;
+  background: #fafafa;
+}
+
+.needGroup {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.needGroup h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--primary-maroon);
+}
+
+.needCards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.needCardsSingle {
+  display: flex;
+  justify-content: center;
+}
+
+.needCard {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  width: 200px;
+  min-height: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.needCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-maroon);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.needIcon {
+  color: var(--primary-maroon);
+  margin-bottom: 12px;
+}
+
+.needTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-black);
+}
+
+.addBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-maroon);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+  background: #660029;
+  transform: scale(1.1);
+}
+.footer{
+  text-align: center;
+}
+.orphanageDashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #800033);
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #ffdde1, #800033); }
+  50% { background: linear-gradient(135deg, #ffd6ff, #5900b3); }
+  100% { background: linear-gradient(135deg, #ffdde1, #800033); }
+}
+
+.statCard {
+  background: linear-gradient(135deg, #e99e5d, #d8481b);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.addBtn {
+  background: linear-gradient(135deg, #ff4081, #800033);
+  position: relative;
+  overflow: hidden;
+}
+
+.addBtn::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.addBtn:hover::after {
+  left: 100%;
+}
+
+
+/* Shimmer swipe */
+.btnEdit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    transparent 80%
+  );
+  transition: all 0.6s;
+}
+
+/* Trigger shimmer on hover */
+.btnEdit:hover::before {
+  left: 100%;
+}
+
+.btnEdit:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+/* Typing Effect for Welcome Text */
+.typingEffect {
+ overflow: hidden; 
+ white-space: nowrap; 
+ 
+ animation: typing 3s steps(30, end), blink 0.7s ;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Gradient Shine on Name */
+.highlight {
+  background: linear-gradient(90deg, #740013, #c00707, #ffdde1, #4f000d);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+
+/* Waving Hand Animation */
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60%, 100% { transform: rotate(0deg); }
+}
+
+/* Subtitle Fade-in */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 3s; /* starts after typing finishes */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.requirementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.categoryAddButton {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--primary-maroon);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.categoryAddButton:hover {
+  background: #6a0e0f;
+}
+
+.categoryDivider {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px dashed #ccc;
+}
+/* ---------------------------------
+   COLLAPSIBLE CATEGORY SECTION
+---------------------------------- */
+
+.needGroup {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.categoryHeader {
+  background: #f7f2ef;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.categoryHeader:hover {
+  background: #ecdcd6;
+  transform: scale(1.02);
+}
+
+.categoryHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5a2b28;
+}
+
+.collapseIcon {
+  font-size: 1.4rem;
+  color: #5a2b28;
+  transition: transform 0.2s ease;
+}
+
+/* BODY OF COLLAPSIBLE SECTION */
+.collapseBody {
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+/* REQUIREMENT ITEM CARDS */
+.requirementsList {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.requirementCard {
+  background: #fff;
+  border: 1px solid #e8d8d4;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.requirementCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+}
+
+.reqName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #43211d;
+}
+
+.reqQty {
+  font-size: 0.9rem;
+  color: #6b4a45;
+}
+
+.reqDesc {
+  font-size: 0.85rem;
+  color: #8a6a65;
+  padding-top: 4px;
+  border-top: 1px dashed #d6c2bc;
+}
+
+/* ADD BUTTON INSIDE COLLAPSE */
+.categoryAddButton {
+  margin-top: 10px;
+  background: #7b2d2d;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.categoryAddButton:hover {
+  background: #5d1f1f;
+}
+
+.categoryDivider {
+  border: none;
+  border-top: 1px solid #e5d4cf;
+  margin: 20px 0;
+}
+
+/* =============================
+   LOADING SCREEN
+============================= */
+.loadingScreen {
+  width: 100%;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #6b4a45;
+}
+
+/* =============================
+   GENERAL LAYOUT
+============================= */
+.needsSection {
+  padding: 30px 0;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  color: #5d2b2b;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.container {
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+}

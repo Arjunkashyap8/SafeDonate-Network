@@ -1,0 +1,9 @@
+Collecting amqp==5.3.1 (from -r requirements.txt (line 1))
+  Using cached amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting anyio==4.4.0 (from -r requirements.txt (line 2))
+  Using cached anyio-4.4.0-py3-none-any.whl.metadata (4.6 kB)
+ERROR: Could not find a version that satisfies the requirement apturl==0.5.2 (from versions: none)
+ERROR: No matching distribution found for apturl==0.5.2
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip

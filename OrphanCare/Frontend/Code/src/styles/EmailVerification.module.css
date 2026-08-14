@@ -1,0 +1,139 @@
+.emailVerification {
+  min-height: 100vh;
+  background-color: var(--secondary-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.iconContainer {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-black);
+}
+
+.subtitle {
+  color: var(--light-gray);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.message {
+  background-color: #e8f5e8;
+  color: #2d5a2d;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  border-left: 4px solid #4caf50;
+}
+
+.codeInputs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.codeInput {
+  width: 50px;
+  height: 60px;
+  border: 2px solid var(--border-gray);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.codeInput:focus {
+  outline: none;
+  border-color: var(--primary-maroon);
+  box-shadow: 0 0 0 3px rgba(128, 0, 51, 0.1);
+}
+
+.btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btnConfirm {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.btnConfirm:hover:not(:disabled) {
+  background-color: #660029;
+}
+
+.btnConfirm:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.resendText {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.resendLink {
+  background: none;
+  border: none;
+  color: var(--primary-maroon);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.resendLink:hover {
+  color: #660029;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 24px;
+  }
+  
+  .codeInputs {
+    gap: 8px;
+  }
+  
+  .codeInput {
+    width: 45px;
+    height: 55px;
+    font-size: 20px;
+  }
+}

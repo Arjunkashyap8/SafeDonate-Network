@@ -1,0 +1,228 @@
+.loginForm {
+  min-height: 100vh;
+  background-color: var(--secondary-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  overflow: hidden;
+  display: flex;
+  min-height: 600px;
+  position: relative;
+}
+
+.formSection {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary-maroon);
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.formContent h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-black);
+}
+
+.subtitle {
+  color: var(--light-gray);
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-black);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-maroon);
+  box-shadow: 0 0 0 3px rgba(128, 0, 51, 0.1);
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--light-gray);
+}
+
+.forgotLink {
+  background: none;
+  border: none;
+  color: var(--primary-maroon);
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.forgotLink:hover {
+  color: #660029;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+.btnPrimary {
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-color: #660029;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btnGoogle {
+  background-color: var(--white);
+  color: var(--text-black);
+  border: 1px solid var(--border-gray);
+}
+
+.btnGoogle:hover {
+  box-shadow: var(--shadow);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.divider {
+  text-align: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-gray);
+}
+
+.divider span {
+  background-color: var(--white);
+  padding: 0 16px;
+  color: var(--light-gray);
+  position: relative;
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--light-gray);
+}
+
+.signupLink a {
+  color: var(--primary-maroon);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+.illustrationSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  
+  .formSection {
+    padding: 32px 24px;
+  }
+  
+  .illustrationSection {
+    max-height: 200px;
+  }
+  
+  .footer {
+    right: 24px;
+  }
+}
